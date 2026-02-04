@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjeta de presentación digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --gray-900: #1f1f1f;
+        --gray-800: #2b2b2b;
+        --gray-700: #3c3c3c;
+        --gray-100: #f5f5f5;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+        font-family: "Inter", sans-serif;
+        color: var(--gray-900);
+        padding: 32px;
+      }
+
+      .card {
+        max-width: 520px;
+        width: 100%;
+        background: var(--white);
+        border: 1px solid rgba(31, 31, 31, 0.08);
+        border-radius: 20px;
+        padding: 36px;
+        box-shadow: 0 20px 40px rgba(31, 31, 31, 0.12);
+      }
+
+      .card__header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+
+      .card__name {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      .card__title {
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--gray-700);
+      }
+
+      .card__description {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--gray-800);
+        margin-bottom: 28px;
+      }
+
+      .card__actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 12px;
+      }
+
+      .card__button {
+        text-decoration: none;
+        color: var(--white);
+        background: var(--gray-900);
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.3px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card__button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(31, 31, 31, 0.15);
+      }
+
+      .card__button--outline {
+        background: transparent;
+        color: var(--gray-900);
+        border: 1px solid rgba(31, 31, 31, 0.4);
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          padding: 28px;
+        }
+
+        .card__name {
+          font-size: 1.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <header class="card__header">
+        <h1 class="card__name">María Fernanda López</h1>
+        <p class="card__title">Director Comercial</p>
+      </header>
+      <p class="card__description">
+        Profesional con amplia trayectoria en BIM y coordinación de proyectos, enfocada en
+        integrar equipos multidisciplinarios, optimizar flujos de trabajo y garantizar entregas
+        de alto impacto para clientes corporativos.
+      </p>
+      <div class="card__actions">
+        <a class="card__button" href="#">LinkedIn</a>
+        <a class="card__button card__button--outline" href="#">Behance</a>
+        <a class="card__button" href="#">Correo</a>
+      </div>
+    </main>
+  </body>
+</html>
